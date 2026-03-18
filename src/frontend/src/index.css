@@ -1,0 +1,72 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --radius: 0.75rem;
+
+    /* Page bg: #F5F7FB → oklch(0.968 0.007 248) */
+    --background: 0.968 0.007 248;
+    /* Card/surface: #FFFFFF */
+    --foreground: 0.145 0.008 248;
+    --card: 1 0 0;
+    --card-foreground: 0.145 0.008 248;
+    --popover: 1 0 0;
+    --popover-foreground: 0.145 0.008 248;
+    /* Primary brand blue: #2563EB → oklch(0.546 0.245 262) */
+    --primary: 0.546 0.245 262;
+    --primary-foreground: 1 0 0;
+    /* Secondary: light gray */
+    --secondary: 0.96 0.004 248;
+    --secondary-foreground: 0.145 0.008 248;
+    --muted: 0.96 0.004 248;
+    /* Secondary text: #6B7280 → oklch(0.54 0.015 253) */
+    --muted-foreground: 0.54 0.015 253;
+    /* Active sidebar highlight: #DBEAFE → oklch(0.915 0.055 258) */
+    --accent: 0.915 0.055 258;
+    --accent-foreground: 0.546 0.245 262;
+    --destructive: 0.577 0.245 27.325;
+    --destructive-foreground: 1 0 0;
+    /* Border: #E5E7EB → oklch(0.922 0.006 248) */
+    --border: 0.922 0.006 248;
+    --input: 0.922 0.006 248;
+    --ring: 0.546 0.245 262;
+    /* Success green: #16A34A → oklch(0.598 0.157 145) */
+    --success: 0.598 0.157 145;
+    --success-foreground: 1 0 0;
+    --chart-1: 0.546 0.245 262;
+    --chart-2: 0.598 0.157 145;
+    --chart-3: 0.646 0.222 41.116;
+    --chart-4: 0.769 0.188 70.08;
+    --chart-5: 0.627 0.265 303.9;
+    --sidebar: 1 0 0;
+    --sidebar-foreground: 0.145 0.008 248;
+    --sidebar-primary: 0.546 0.245 262;
+    --sidebar-primary-foreground: 1 0 0;
+    --sidebar-accent: 0.915 0.055 258;
+    --sidebar-accent-foreground: 0.546 0.245 262;
+    --sidebar-border: 0.922 0.006 248;
+    --sidebar-ring: 0.546 0.245 262;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+    font-family: "Inter", system-ui, -apple-system, sans-serif;
+  }
+
+  @media print {
+    .no-print {
+      display: none !important;
+    }
+    .print-only {
+      display: block !important;
+    }
+  }
+}
